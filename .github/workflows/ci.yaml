@@ -20,7 +20,7 @@ jobs:
           go-version: 1.17
       - name: install go-lint
         run: |
-          go get -u golang.org/x/lint/golint
+          go install golang.org/x/lint/golint
           export PATH=$PATH:$(go list -f {{.Target}} golang.org/x/lint/golint)
       - uses: pre-commit/action@v2.0.3
 
